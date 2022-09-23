@@ -1,0 +1,21 @@
+<div class="container">
+    <h4>Begin With Your Search Here !!!!!</h4>
+      <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="searchKey"/>
+        </div>
+        <div class="col-sm-4" align="left">
+          <button class="btn btn-success" (click)="doSearch()">Search</button>
+        </div>
+      </div>
+  
+      <div>
+        <div class="row">
+          <div class="col-md-4" *ngFor="let item of userSearchResult.hits">
+            <app-searched-image [searchedIamge]="item"></app-searched-image>
+          </div>
+        </div>
+      </div>
+  </div>
+  
